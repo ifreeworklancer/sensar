@@ -1,0 +1,13 @@
+#app-footer {
+  padding: 15px 0;
+  background: #121316;
+
+  .footer-item {
+    color: #5F646E;
+    font-size: 0.8125rem;
+
+    a {
+      color: $primary;
+    }
+  }
+}

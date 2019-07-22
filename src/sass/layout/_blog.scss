@@ -1,0 +1,173 @@
+#blog {
+  padding: 130px 0 90px;
+  border-bottom: 5px solid #fff;
+  background: url('../images/main/blog-bg.jpg') 50% 50% /cover no-repeat;
+
+  .description-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    p {
+      position: relative;
+      font-size: 1.125rem;
+      padding: 10px 15px;
+      margin-bottom: 25px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-bottom: 0;
+        padding: 10px 30px;
+        max-width: 80%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 4px;
+        background: $primary;
+      }
+    }
+  }
+}
+
+.blog-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  margin-bottom: 40px;
+  flex-direction: column;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    flex-direction: row;
+  }
+
+  .content {
+    max-width: 350px;
+    order: 2;
+    margin-top: 20px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      order: 1;
+      margin-top: 0;
+    }
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .description {
+      margin-bottom: 20px;
+
+      p {
+        line-height: 180%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .image {
+    max-width: 240px;
+    order: 1;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      order: 2;
+    }
+
+    img {
+      max-width: 220px;
+    }
+  }
+
+  .decor-bg {
+    position: absolute;
+    top: 25px;
+    width: 220px;
+    height: 200px;
+    background: $secondary;
+    z-index: -1;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &--high {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 30px;
+    height: 100%;
+
+    .content {
+      order: 1;
+    }
+
+    .image {
+      margin-top: auto;
+      margin-left: auto;
+      max-width: 400px;
+      order: 2;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .decor-bg {
+      left: 0;
+      height: 105%;
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &--right {
+    margin-top: 40px;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      margin-top: 0;
+    }
+
+    .decor-bg {
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        right: 0;
+      }
+    }
+  }
+
+  &--left {
+
+    .content {
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        order: 2;
+      }
+    }
+
+    .image {
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        order: 1;
+      }
+    }
+
+    .decor-bg {
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+}

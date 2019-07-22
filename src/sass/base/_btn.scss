@@ -1,0 +1,20 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-family: $headings-font-family;
+  text-transform: uppercase;
+  transition: .5s;
+  z-index: 5;
+
+  &-primary {
+    color: #fff;
+    background: linear-gradient(180deg, #6CE1DA 0%, #489C97 100%);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
