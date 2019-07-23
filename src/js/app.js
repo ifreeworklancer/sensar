@@ -6,7 +6,8 @@ import IMask from 'imask';
 
 window.jQuery = window.$ = jquery;
 
-var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+require('jquery-viewport-checker');
 
 (function () {
 
@@ -45,16 +46,6 @@ var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
         });
     });
 
-    $(document).on('keyup', function (e) {
-        if (e.keyCode === 27) {
-            $('.outer').remove();
-            $(categoryCarModal).removeClass('active');
-            $(connectModal).removeClass('active');
-            $(orderModal).removeClass('active');
-            $(modalMask).removeClass('active');
-        }
-    });
-
     /**
      * Modal
      */
@@ -76,6 +67,16 @@ var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
     $(modalMask).on('click', function () {
         $(connectModal).removeClass('active');
         $(modalMask).removeClass('active');
+    });
+
+    $(document).on('keyup', function (e) {
+        if (e.keyCode === 27) {
+            if($(connectModal).lenght > 0) {
+                $(connectModal).removeClass('active');
+                $(orderModal).removeClass('active');
+                $(modalMask).removeClass('active');
+            }
+        }
     });
 
     /**
@@ -172,6 +173,9 @@ var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
     /**
      * Animate scroll
      */
+    $('.blog-item').viewportChecker({
+        classToAdd: 'start-animation'
+    });
     // ScrollReveal().reveal('.intro-item', {
     //     origin: 'left',
     //     delay: 400,

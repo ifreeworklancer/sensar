@@ -84,22 +84,21 @@ $about = [
 ];
 
 $blog = [
+    'title' => 'Блог',
+    'description' => '<p>Посмотеть все статьи в блоге по всем категориям</p>',
     'image_background' => '../../images/main/blog-bg.jpg',
     'item' => [
         [
             'title' => 'Новости',
-            'description' => '<p>Описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
             'image' => '../../images/main/blog-1.png'
         ],
         [
             'title' => 'Мероприятия',
-            'description' => '<p>Описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
             'image' => '../../images/main/blog-2.png'
         ],
         [
             'title' => 'Академия',
-            'description' => '<p>Описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
-            'image' => '../../images/main/blog-2.png'
+            'image' => '../../images/main/blog-3.png'
         ],
     ]
 ];

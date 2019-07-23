@@ -1,7 +1,11 @@
 #blog {
-  padding: 130px 0 90px;
+  padding: 130px 0;
   border-bottom: 5px solid #fff;
   background: url('../images/main/blog-bg.jpg') 50% 50% /cover no-repeat;
+
+  .section-title {
+    margin-bottom: 30px;
+  }
 
   .description-section {
     display: flex;
@@ -41,133 +45,61 @@
 
 .blog-item {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: block;
+  margin: 40px auto 0;
   z-index: 5;
-  margin-bottom: 40px;
-  flex-direction: column;
+  max-width: 350px;
 
-  @media (min-width: map_get($grid-breakpoints, sm)) {
-    flex-direction: row;
-  }
-
-  .content {
-    max-width: 350px;
-    order: 2;
-    margin-top: 20px;
-
-    @media (min-width: map_get($grid-breakpoints, sm)) {
-      order: 1;
-      margin-top: 0;
-    }
-
-    .title {
-      margin-bottom: 20px;
-    }
-
-    .description {
-      margin-bottom: 20px;
-
-      p {
-        line-height: 180%;
-        margin-bottom: 15px;
-      }
-    }
+  .title {
+    padding: 30px 30px 0;
+    margin-bottom: -40px;
+    transition: .5s;
   }
 
   .image {
-    max-width: 240px;
-    order: 1;
-
-    @media (min-width: map_get($grid-breakpoints, sm)) {
-      order: 2;
-    }
 
     img {
-      max-width: 220px;
-    }
-  }
-
-  .decor-bg {
-    position: absolute;
-    top: 25px;
-    width: 220px;
-    height: 200px;
-    background: $secondary;
-    z-index: -1;
-
-    @media (min-width: map_get($grid-breakpoints, sm)) {
-      top: auto;
-      bottom: 0;
-    }
-  }
-
-  &--high {
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 30px;
-    height: 100%;
-
-    .content {
-      order: 1;
-    }
-
-    .image {
-      margin-top: auto;
-      margin-left: auto;
-      max-width: 400px;
-      order: 2;
-
-      img {
-        max-width: 100%;
-      }
-    }
-
-    .decor-bg {
-      left: 0;
-      height: 105%;
-      top: auto;
-      bottom: 0;
-    }
-  }
-
-  &--right {
-    margin-top: 40px;
-
-    @media (min-width: map_get($grid-breakpoints, xl)) {
-      margin-top: 0;
-    }
-
-    .decor-bg {
+      max-width: 100%;
 
       @media (min-width: map_get($grid-breakpoints, sm)) {
-        right: 0;
+        width: 350px;
+        max-width: 440px;
       }
     }
   }
 
-  &--left {
+  &::before {
+    content: '';
+    @extend %pos;
+    top: 70px;
+    opacity: 1;
+    background: #1E2127;
+    z-index: -10;
+    transition: .5s;
+  }
 
-    .content {
+  &::after {
+    content: '';
+    @extend %pos;
+    top: auto;
+    height: 0;
+    background: $primary;
+    z-index: -5;
+    transition: .5s;
+  }
 
-      @media (min-width: map_get($grid-breakpoints, sm)) {
-        order: 2;
-      }
+  &:hover {
+
+    .title {
+      color: $dark;
     }
 
-    .image {
-
-      @media (min-width: map_get($grid-breakpoints, sm)) {
-        order: 1;
-      }
+    &::after {
+      height: 100%;
     }
 
-    .decor-bg {
-
-      @media (min-width: map_get($grid-breakpoints, sm)) {
-        left: 0;
-        right: auto;
-      }
+    &::before {
+      opacity: 0;
     }
   }
 }
