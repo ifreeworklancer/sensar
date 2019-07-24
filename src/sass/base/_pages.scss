@@ -1,12 +1,12 @@
 .page-section {
-  padding: 100px 0 70px;
+  padding: 100px 0;
 
   @media (min-width: map_get($grid-breakpoints, sm)) {
-    padding: 130px 50px 70px;
+    padding: 130px 50px;
   }
 
   @media (min-width: map_get($grid-breakpoints, lg)) {
-    padding: 130px 80px 70px;
+    padding: 130px 80px;
   }
 
   @media (min-width: map_get($grid-breakpoints, xl)) {

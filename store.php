@@ -103,4 +103,29 @@ $blog = [
     ]
 ];
 
+$single_portfolio = [
+    'logo' => '../../images/icon/logo-single-portfolio.png',
+    'title' => 'Comfort City',
+    'place' => 'Запорожье, ул. Бородинская 2',
+    'description' => '<p>Полное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui consequat. </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex et.  Duis aute irure dolor in <a href="#">reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Полное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irurenulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+    'images' => [
+        '../../images/main/portfolio-image.jpg',
+        '../../images/single/single-portfolio-1.jpg',
+        '../../images/single/single-portfolio-1.jpg',
+        '../../images/single/single-portfolio-1.jpg',
+        '../../images/single/single-portfolio-1.jpg',
+        '../../images/single/single-portfolio-1.jpg',
+    ],
+    'video' => [
+        [
+            'preview' => "https://img.youtube.com/vi/d8uEl7kj6CQ/maxresdefault.jpg",
+            'link' => 'https://www.youtube.com/embed/d8uEl7kj6CQ',
+        ],
+        [
+            'preview' => "https://img.youtube.com/vi/_KS9rpi5H0o/maxresdefault.jpg",
+            'link' => 'https://www.youtube.com/embed/_KS9rpi5H0o',
+        ],
+    ]
+];
+
 

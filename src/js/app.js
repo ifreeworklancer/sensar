@@ -8,6 +8,7 @@ window.jQuery = window.$ = jquery;
 
 let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 require('jquery-viewport-checker');
+require('@fancyapps/fancybox');
 
 (function () {
 
@@ -217,6 +218,10 @@ require('jquery-viewport-checker');
         classToAdd: 'start-animation',
     });
     $('.blog-item').viewportChecker({
+        classToAdd: 'start-animation',
+    });
+
+    $('.portfolio-gallery-item').viewportChecker({
         classToAdd: 'start-animation',
     });
 

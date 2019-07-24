@@ -1,7 +1,7 @@
 @import "config/variables";
 @import "config/placeholders";
 
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap", "~@fancyapps/fancybox/dist/jquery.fancybox.css";
 
 @import "base/body";
 @import "base/btn";
@@ -13,6 +13,7 @@
 @import "modules/modal";
 @import "modules/slider";
 @import "modules/breadcrumb";
+@import "modules/fancybox";
 
 @import "layout/header";
 @import "layout/intro";
@@ -26,3 +27,4 @@
 
 @import "pages/page-portfolio";
 
+@import "single/single-portfolio";
