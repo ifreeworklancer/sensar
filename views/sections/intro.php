@@ -15,7 +15,7 @@
                             <p>
                                 <?= $intro['description']; ?>
                             </p>
-                            <a href="#" class="link-more">
+                            <a href="#portfolio-main" class="link-more scroll-link">
                                 Узнать больше
                                 <svg width="25" height="10">
                                     <use xlink:href="#arrow-next"></use>

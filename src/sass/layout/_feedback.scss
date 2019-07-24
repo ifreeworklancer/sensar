@@ -8,6 +8,14 @@
   }
 }
 
+#feedback-secondary {
+  padding-bottom: 70px;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding-bottom: 140px;
+  }
+}
+
 .feedback {
   position: relative;
   padding: 40px 0;
@@ -24,11 +32,12 @@
     content: '';
     position: absolute;
     top: 40px;
-    left: -10px;
-    right: -10px;
+    left: 0;
+    right: 0;
     bottom: 40px;
     background: $primary;
     z-index: -10;
+    transition: .5s;
   }
 
   &::after {
@@ -38,17 +47,14 @@
     height: 50%;
     left: 0;
     right: 0;
-    bottom: -80px;
+    bottom: 0;
     background: url("../images/icon/feedback-decor-shadow.png") 50% 50% /contain no-repeat;
     z-index: -11;
     display: none;
+    transition: 1s;
 
     @media (min-width: map_get($grid-breakpoints, sm)) {
       display: block;
-    }
-
-    @media (min-width: map_get($grid-breakpoints, xl)) {
-      bottom: -50px;
     }
   }
 
@@ -83,6 +89,22 @@
       p {
         font-size: 1.25rem;
         margin-bottom: 25px;
+      }
+    }
+  }
+
+  &.start-animation {
+
+    &::before {
+      left: -10px;
+      right: -10px;
+    }
+
+    &::after {
+      bottom: -80px;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        bottom: -50px;
       }
     }
   }

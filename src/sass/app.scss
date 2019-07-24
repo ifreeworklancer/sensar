@@ -6,11 +6,13 @@
 @import "base/body";
 @import "base/btn";
 @import "base/layout";
+@import "base/pages";
 
 @import "modules/menu";
 @import "modules/forms";
 @import "modules/modal";
 @import "modules/slider";
+@import "modules/breadcrumb";
 
 @import "layout/header";
 @import "layout/intro";
@@ -21,4 +23,6 @@
 @import "layout/blog";
 @import "layout/contacts";
 @import "layout/footer";
+
+@import "pages/page-portfolio";
 

@@ -51,6 +51,16 @@
 
     .portfolio-item {
       align-items: flex-end;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        padding-left: 40px;
+      }
+    }
+
+    .decor-title {
+      left: 35px;
+      transform: rotate(-90deg);
+      transform-origin: 0 50%;
     }
 
     &::before {
@@ -62,6 +72,17 @@
 
     .portfolio-item {
       align-items: flex-start;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        padding-right: 40px;
+      }
+
+    }
+
+    .decor-title {
+      right: 10px;
+      transform: rotate(90deg) translateY(-100%);
+      transform-origin: 80% 0;
     }
 
     &::before {
@@ -75,16 +96,14 @@
     flex-direction: column;
     width: 100%;
 
-    @media (min-width: map_get($grid-breakpoints, xl)) {
-      padding-left: 40px;
-    }
-
     .place {
       position: relative;
       font-family: $headings-font-family;
       color: #fff;
       margin-bottom: 15px;
       z-index: 10;
+      transform: translateY(-50%);
+      transition: 1s;
     }
 
     .image {
@@ -93,6 +112,23 @@
       padding-bottom: 56.25%;
       @extend %img;
       z-index: 5;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 40%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+      }
+
+      &::after {
+        content: '';
+        @extend %pos;
+        height: 0;
+        background: $primary;
+      }
     }
 
     .description {
@@ -104,6 +140,8 @@
       border-top: 4px solid $primary;
       padding: 40px;
       z-index: 10;
+      transform: translateY(100%);
+      transition: 1s;
 
       @media (min-width: map_get($grid-breakpoints, sm)) {
         flex-direction: row;
@@ -154,12 +192,9 @@
     .decor-title {
       display: none;
       position: absolute;
-      left: 35px;
       bottom: -40px;
-      transform: rotate(-90deg);
       font-size: $h1-font-size;
       font-family: $headings-font-family;
-      transform-origin: 0 50%;
 
       @media (min-width: map_get($grid-breakpoints, xl)) {
         display: block;
@@ -175,6 +210,21 @@
         -webkit-text-stroke: 1px #fff;
         text-stroke: 1px #fff;
         z-index: 10;
+      }
+    }
+
+    &.is-selected {
+
+      .place {
+        transform: translateY(0);
+      }
+      .image {
+        &::after {
+          animation: toggleHeight 1.3s linear;
+        }
+      }
+      .description {
+        transform: translateY(0);
       }
     }
   }
