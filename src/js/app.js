@@ -223,6 +223,9 @@ require('@fancyapps/fancybox');
     $('.blog-item').viewportChecker({
         classToAdd: 'start-animation',
     });
+    $('.article-blog').viewportChecker({
+        classToAdd: 'start-animation',
+    });
 
     $('.portfolio-gallery-item').viewportChecker({
         classToAdd: 'start-animation',
@@ -268,7 +271,7 @@ require('@fancyapps/fancybox');
             $(this).addClass('is-disabled');
         });
         mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94dXNlcm11c2V1bSIsImEiOiJjanRya2FoZXQwcjVlNDVtdTNlOWNoMzUyIn0.oMm4w0lY15eiIFOcl-gkIA';
-        var map = new mapboxgl.Map({
+        let map = new mapboxgl.Map({
             container: 'contacts-map',
             style: 'mapbox://styles/mapbox/dark-v10',
             center: [30.510974, 50.449998],
@@ -280,6 +283,47 @@ require('@fancyapps/fancybox');
                 if (error) throw error;
                 map.addImage('cat', image);
                 map.addLayer({
+                    "id": "points",
+                    "type": "symbol",
+                    "source": {
+                        "type": "geojson",
+                        "data": {
+                            "type": "FeatureCollection",
+                            "features": [{
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [30.510974, 50.449998]
+                                }
+                            }]
+                        }
+                    },
+                    "layout": {
+                        "icon-image": "cat",
+                        "icon-size": 1
+                    }
+                });
+            });
+        });
+    }
+
+    if ($('#contacts-page-maps').length > 0) {
+        $('.map-mask').on('click', function () {
+            $(this).addClass('is-disabled');
+        });
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94dXNlcm11c2V1bSIsImEiOiJjanRya2FoZXQwcjVlNDVtdTNlOWNoMzUyIn0.oMm4w0lY15eiIFOcl-gkIA';
+        let mapPageContacts = new mapboxgl.Map({
+            container: 'contacts-page-maps',
+            style: 'mapbox://styles/mapbox/dark-v10',
+            center: [30.510974, 50.449998],
+            zoom: 16
+        });
+
+        mapPageContacts.on('load', function () {
+            mapPageContacts.loadImage('../images/icon/placeholder.png', function (error, image) {
+                if (error) throw error;
+                mapPageContacts.addImage('cat', image);
+                mapPageContacts.addLayer({
                     "id": "points",
                     "type": "symbol",
                     "source": {

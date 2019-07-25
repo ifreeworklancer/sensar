@@ -31,7 +31,12 @@ require_once('../views/base/header.php');
             <div class="row position-relative">
                 <div class="decor-bg"></div>
                 <div class="col-sm-10 mx-auto">
-                    <div class="article">
+                    <div class="article-blog">
+                        <div class="image">
+                            <div>
+                                <img src="<?= $single_article['image']; ?>" alt="image article">
+                            </div>
+                        </div>
                         <h1 class="title">
                             <?= $single_article['title']; ?>
                         </h1>

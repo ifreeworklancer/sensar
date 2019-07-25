@@ -1,5 +1,5 @@
 #single-article {
-  
+
   .decor-bg {
     @extend %pos;
     top: 30px;
@@ -13,7 +13,27 @@
     }
   }
 
-  .article {
+  .article-blog {
+
+    .image {
+      margin-bottom: 20px;
+
+      div {
+        position: relative;
+
+        &::before {
+          content: '';
+          @extend %pos;
+          height: 0;
+          background: $primary;
+          z-index: 2;
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
 
     .title {
       margin-bottom: 25px;
@@ -36,7 +56,7 @@
         @extend .content-list;
 
         li {
-          @extend  li;
+          @extend li;
         }
       }
 
@@ -44,6 +64,19 @@
         width: auto;
         max-width: 100%;
         margin-bottom: 20px;
+      }
+    }
+
+    &.start-animation {
+
+      .image {
+
+        div {
+
+          &::before {
+            animation: toggleHeight 1.2s ease-in-out;
+          }
+        }
       }
     }
   }
