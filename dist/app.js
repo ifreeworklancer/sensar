@@ -2220,6 +2220,12 @@ __webpack_require__(35);
         delay: 400,
         distance: '200px'
     }, 200);
+    Object(__WEBPACK_IMPORTED_MODULE_2_scrollreveal__["a" /* default */])().reveal('#page-thanks .decor-list li', {
+        origin: 'bottom',
+        delay: 400,
+        distance: '200px',
+        interval: 200
+    });
 
     /**
      * Map

@@ -951,7 +951,7 @@ body.compensate-for-scrollbar {
     .fancybox-thumbs__list a {
         max-width: calc(100% - 10px);
     }
-}.btn-outline-primary::before, .map-mask, .modal-mask, #intro .decor-circle--big::before, #intro .decor-circle--big::after, .portfolio-slider .portfolio-item .image::after, #advantages::before, #about .decor-mask, .blog-card::before, .blog-card::after, #contacts #contacts-map, #page-contacts #contacts-page-maps, #single-portfolio .portfolio-gallery-item div::before, #single-blog .blog-item .image div::before, #single-article .decor-bg, #single-article .article-blog .image div::before {
+}.btn-outline-primary::before, .map-mask, .modal-mask, #intro .decor-circle--big::before, #intro .decor-circle--big::after, .portfolio-slider .portfolio-item .image::after, #advantages::before, #about .decor-mask, .blog-card::before, .blog-card::after, #contacts #contacts-map, #page-contacts #contacts-page-maps, #page-thanks .decor-list, #single-portfolio .portfolio-gallery-item div::before, #single-blog .blog-item .image div::before, #single-article .decor-bg, #single-article .article-blog .image div::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -14407,6 +14407,12 @@ input {
   color: #6BE0D9;
 }
 
+@media (min-width: 576px) {
+  #app-footer.app-footer-secondary {
+    height: 55px;
+  }
+}
+
 #page-portfolio .portfolio-slider {
   margin-bottom: 150px;
 }
@@ -14544,6 +14550,68 @@ input {
 #page-contacts #contacts-page-maps {
   bottom: 15px;
   z-index: 1;
+}
+
+#page-thanks {
+  height: calc(100vh - 55px);
+  min-height: 600px;
+}
+
+#page-thanks .thanks-item {
+  color: #fff;
+}
+
+#page-thanks .thanks-item .title {
+  margin-bottom: 15px;
+}
+
+#page-thanks .thanks-item .subtitle {
+  color: #6BE0D9;
+  margin-bottom: 25px;
+}
+
+#page-thanks .decor-list {
+  z-index: -2;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #page-thanks .decor-list {
+    display: block;
+  }
+}
+
+#page-thanks .decor-list li, #page-thanks .decor-list #single-article .article-blog .description ul li, #single-article .article-blog .description ul #page-thanks .decor-list li {
+  position: absolute;
+  background: #1E2127;
+}
+
+#page-thanks .decor-list li:nth-of-type(1), #page-thanks .decor-list #single-article .article-blog .description ul li:nth-of-type(1), #single-article .article-blog .description ul #page-thanks .decor-list li:nth-of-type(1) {
+  top: 15%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+}
+
+#page-thanks .decor-list li:nth-of-type(2), #page-thanks .decor-list #single-article .article-blog .description ul li:nth-of-type(2), #single-article .article-blog .description ul #page-thanks .decor-list li:nth-of-type(2) {
+  top: 25%;
+  right: 10%;
+  width: 150px;
+  height: 300px;
+}
+
+#page-thanks .decor-list li:nth-of-type(3), #page-thanks .decor-list #single-article .article-blog .description ul li:nth-of-type(3), #single-article .article-blog .description ul #page-thanks .decor-list li:nth-of-type(3) {
+  left: 30%;
+  width: 150px;
+  height: 100px;
+  bottom: 15%;
+}
+
+#page-thanks .decor-list li:nth-of-type(4), #page-thanks .decor-list #single-article .article-blog .description ul li:nth-of-type(4), #single-article .article-blog .description ul #page-thanks .decor-list li:nth-of-type(4) {
+  right: 30%;
+  width: 200px;
+  height: 180px;
+  bottom: 20%;
 }
 
 #single-portfolio .decor-bg {

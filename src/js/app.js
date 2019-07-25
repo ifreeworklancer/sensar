@@ -262,6 +262,12 @@ require('@fancyapps/fancybox');
         delay: 400,
         distance: '200px',
     }, 200);
+    ScrollReveal().reveal('#page-thanks .decor-list li', {
+        origin: 'bottom',
+        delay: 400,
+        distance: '200px',
+        interval: 200,
+    });
 
     /**
      * Map

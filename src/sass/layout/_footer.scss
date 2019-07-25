@@ -10,4 +10,11 @@
       color: $primary;
     }
   }
+
+  &.app-footer-secondary {
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      height: 55px;
+    }
+  }
 }

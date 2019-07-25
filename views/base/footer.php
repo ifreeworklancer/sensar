@@ -88,7 +88,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="footer-item">
+            <div class="footer-item mt-2 mt-sm-0">
                 Разработка и дизайн <a href="https://impressionbureau.pro/" target="_blank">Impression Bureau</a>
             </div>
         </div>
