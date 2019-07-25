@@ -89,7 +89,7 @@
 
     &.start-animation {
 
-      .image-wrapper {
+      div {
 
         &::before {
           animation: toggleHeightOpacity 1.2s ease-in-out;
@@ -97,7 +97,7 @@
       }
     }
 
-    .image-wrapper {
+    div {
       position: relative;
 
       img {

@@ -217,6 +217,9 @@ require('@fancyapps/fancybox');
     $('#blog .description-section').viewportChecker({
         classToAdd: 'start-animation',
     });
+    $('.blog-card').viewportChecker({
+        classToAdd: 'start-animation',
+    });
     $('.blog-item').viewportChecker({
         classToAdd: 'start-animation',
     });
@@ -240,6 +243,11 @@ require('@fancyapps/fancybox');
         delay: 400,
         distance: '200px',
     }, 200);
+    ScrollReveal().reveal('.blog-card', {
+        origin: 'bottom',
+        delay: 400,
+        distance: '200px',
+    });
     ScrollReveal().reveal('.blog-item', {
         origin: 'bottom',
         delay: 400,

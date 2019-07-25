@@ -1,0 +1,50 @@
+#single-article {
+  
+  .decor-bg {
+    @extend %pos;
+    top: 30px;
+    width: 45%;
+    bottom: -50px;
+    background: #1E2127;
+    z-index: -2;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 30%;
+    }
+  }
+
+  .article {
+
+    .title {
+      margin-bottom: 25px;
+    }
+
+    .subtitle {
+      font-family: $headings-font-family;
+      color: $primary;
+      margin-bottom: 20px;
+    }
+
+    .description {
+
+      p {
+        line-height: 180%;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        @extend .content-list;
+
+        li {
+          @extend  li;
+        }
+      }
+
+      img {
+        width: auto;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

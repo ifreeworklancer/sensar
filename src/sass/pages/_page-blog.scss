@@ -1,0 +1,25 @@
+#page-blog {
+
+  .blog-card {
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      max-width: 100%;
+    }
+
+    .title {
+      margin-bottom: -10px;
+
+      @media (min-width: map_get($grid-breakpoints, xxl)) {
+        margin-bottom: -40px;
+      }
+    }
+
+    .image {
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

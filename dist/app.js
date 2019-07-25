@@ -1939,7 +1939,7 @@ function isDomNode(x) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(7);
-module.exports = __webpack_require__(35);
+module.exports = __webpack_require__(36);
 
 
 /***/ }),
@@ -1967,7 +1967,7 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 
 var mapboxgl = __webpack_require__(33);
 __webpack_require__(34);
-__webpack_require__(37);
+__webpack_require__(35);
 
 (function () {
 
@@ -2175,6 +2175,9 @@ __webpack_require__(37);
     $('#blog .description-section').viewportChecker({
         classToAdd: 'start-animation'
     });
+    $('.blog-card').viewportChecker({
+        classToAdd: 'start-animation'
+    });
     $('.blog-item').viewportChecker({
         classToAdd: 'start-animation'
     });
@@ -2198,6 +2201,11 @@ __webpack_require__(37);
         delay: 400,
         distance: '200px'
     }, 200);
+    Object(__WEBPACK_IMPORTED_MODULE_2_scrollreveal__["a" /* default */])().reveal('.blog-card', {
+        origin: 'bottom',
+        delay: 400,
+        distance: '200px'
+    });
     Object(__WEBPACK_IMPORTED_MODULE_2_scrollreveal__["a" /* default */])().reveal('.blog-item', {
         origin: 'bottom',
         delay: 400,
@@ -21806,13 +21814,6 @@ return mapboxgl;
 /* 35 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 36 */,
-/* 37 */
-/***/ (function(module, exports) {
-
 // ==================================================
 // fancyBox v3.5.7
 //
@@ -27445,6 +27446,12 @@ return mapboxgl;
     }
   });
 })(document, jQuery);
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

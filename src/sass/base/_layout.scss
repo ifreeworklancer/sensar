@@ -106,3 +106,24 @@
     }
   }
 }
+
+.content-list {
+
+  li {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    line-height: 180%;
+    color: #fff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 16px;
+      height: 15px;
+      background: url('../images/icon/list-icon.svg') 50% 50% /cover no-repeat;
+    }
+  }
+}

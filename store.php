@@ -128,4 +128,34 @@ $single_portfolio = [
     ]
 ];
 
+$single_blog = [
+    'title' => 'Новости',
+    'item' => [
+        [
+            'image' => "../../images/single/single-blog-1.jpg",
+            'data' => '17 июля 2019',
+            'title' => 'Заголовок новости lorem ipsum dolor',
+            'description' => '<p>Полное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+        ],
+        [
+            'image' => "../../images/single/single-blog-1.jpg",
+            'data' => '10 июля 2019',
+            'title' => 'Заголовок новости lorem ipsum dolor',
+            'description' => '<p>Полное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+        ],
+        [
+            'image' => "../../images/single/single-blog-1.jpg",
+            'data' => '30 июня 2019',
+            'title' => 'Заголовок новости lorem ipsum dolor',
+            'description' => '<p>Полное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
+        ],
+    ]
+];
+
+$single_article = [
+    'title' => 'Comfort City',
+    'subtitle' => 'Подзаголвок',
+    'description' => '<p>Полное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui consequat. </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex et.  Duis aute irure dolor in <a href="#">reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Полное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irurenulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><ul><li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque est excepturi libero molestiae obcaecati quaerat quia reiciendis, sed voluptatibus?</li><li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, culpa.</li><li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus distinctio, eos officiis porro quas voluptatum.</li></ul>',
+];
+
 

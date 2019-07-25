@@ -15,7 +15,7 @@
             </div>
             <?php foreach ($blog['item'] as $item) : ?>
                 <div class="col-sm-7 col-xl-4">
-                    <a href="#" class="blog-item">
+                    <a href="#" class="blog-card">
                         <h4 class="title">
                             <?= $item['title']; ?>
                         </h4>

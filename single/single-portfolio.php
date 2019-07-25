@@ -55,7 +55,7 @@ require_once('../views/base/header.php');
                 <?php foreach ($single_portfolio['images'] as $item) : ?>
                     <div class="col-sm-4 px-0">
                         <a href="<?= $item; ?>" data-fancybox="images" class="portfolio-gallery-item">
-                            <div class="image-wrapper">
+                            <div>
                                 <img src="<?= $item; ?>" alt="image">
                             </div>
                         </a>
@@ -74,7 +74,7 @@ require_once('../views/base/header.php');
                 <?php foreach ($single_portfolio['video'] as $item) : ?>
                     <div class="col-sm-4 px-0">
                         <a href="<?= $item['link']; ?>" data-fancybox="video" class="portfolio-gallery-item">
-                            <div class="image-wrapper">
+                            <div>
                                 <img src="<?= $item['preview']; ?>" alt="image">
                             </div>
                         </a>
